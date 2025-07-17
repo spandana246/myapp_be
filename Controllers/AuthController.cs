@@ -58,16 +58,41 @@ namespace GroceryAppBackend.Controllers
         }
 
         [HttpPost("cart/{username}/add")]
-        public IActionResult AddToCart(string username, [FromBody] CartItem item)
+        public IActionResult AddToCart(string username, [FromBody] CartItem newItem)
+        {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(newItem.Name))
+                return BadRequest("Invalid input");
+
+            var user = users.FirstOrDefault(u => u.Username == username);
+            if (user == null)
+                return NotFound("User not found");
+
+            var cart = user.Cart;
+            var existingItem = cart.FirstOrDefault(i => i.Name == newItem.Name);
+
+            if (existingItem != null)
+            {
+                existingItem.Quantity += 1; // ✅ Increment quantity
+            }
+            else
+            {
+                newItem.Id = cart.Count > 0 ? cart.Max(i => i.Id) + 1 : 1;
+                newItem.Quantity = 1; // ✅ Start at 1
+                cart.Add(newItem);
+            }
+
+            return Ok(cart);
+        }
+
+        [HttpPost("cart/{username}/checkout")]
+        public IActionResult Checkout(string username)
         {
             var user = users.FirstOrDefault(u => u.Username == username);
             if (user == null)
-            {
                 return NotFound("User not found");
-            }
 
-            user.Cart.Add(item);
-            return Ok("Item added to cart");
+            user.Cart.Clear(); // ✅ Clear the cart on checkout
+            return Ok("Checkout successful");
         }
     }
 }

@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sai Meher (Bobby)\\GroceryAppBackend\\GroceryAppBackend.csproj": {}
+    "C:\\Users\\labadmin\\Bee\\myapp_be\\GroceryAppBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sai Meher (Bobby)\\GroceryAppBackend\\GroceryAppBackend.csproj": {
+    "C:\\Users\\labadmin\\Bee\\myapp_be\\GroceryAppBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sai Meher (Bobby)\\GroceryAppBackend\\GroceryAppBackend.csproj",
+        "projectUniqueName": "C:\\Users\\labadmin\\Bee\\myapp_be\\GroceryAppBackend.csproj",
         "projectName": "GroceryAppBackend",
-        "projectPath": "C:\\Users\\Sai Meher (Bobby)\\GroceryAppBackend\\GroceryAppBackend.csproj",
-        "packagesPath": "C:\\Users\\Sai Meher (Bobby)\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sai Meher (Bobby)\\GroceryAppBackend\\obj\\",
+        "projectPath": "C:\\Users\\labadmin\\Bee\\myapp_be\\GroceryAppBackend.csproj",
+        "packagesPath": "C:\\Users\\labadmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\labadmin\\Bee\\myapp_be\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sai Meher (Bobby)\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\labadmin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
